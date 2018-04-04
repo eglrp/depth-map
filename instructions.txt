@@ -26,8 +26,13 @@ On moving too fast, the thing never found a good initial pair.
 Steps for COLMAP
 1) Create the frames from the videos - execute the "get_first_frame" bash script. Can also change to a python script next time.
 
-2) scp -r Split_Museum_1_second_segment_all_first_frames/Split_Museum_1_second_segments rt443@phoenix28.cs.cornell.edu:/home/user/19_colmap/Split_Museum_1_second_segments/images
+2) scp -r Split_Museum_1_second_segment_all_first_frames/Split_Museum_1_second_segments user@phoenix28.cs.univ.edu:/home/user/19_colmap/Split_Museum_1_second_segments/images
 
 3) export PROJECT_PATH=/home/rt443/19_colmap/Split_Museum_1_second_segments_first_frames
 
-4) 
+4) go through the step by step process - next time figure out the one line command.
+
+5) process the bin files there.
+
+6) copy them back using sshfs
+
