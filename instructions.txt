@@ -1,0 +1,33 @@
+ffmpeg -i panther_clipped.mp4 panther_images/output-%04d.jpg
+  489  man ffmpeg
+  505  ffmpeg -i input_video.MTS -c copy -map 0 -segment_time 8 -f segment output_video%03d.MTS
+  507  ffmpeg -i panther_clipped.mp4 -c copy -map 0 -segment_time 8 -f segment output_video%03d.MTS
+  509  ffmpeg -i panther_clipped.mp4 -c copy -map 0 -segment_time 1 -f segment output_video%03d.MTS
+  511  man ffmpeg | grep segment
+  514  ffmpeg -i Panther.mp4 -c copy -map 0 -segment_time 1 -f segment output_video%03d.MTS
+  518  ffmpeg -i Family.mp4 -c copy -map 0 -segment_time 1 -f segment Split_Family_1_second_segments/family_%03d.MTS
+  518  ffmpeg -i Museum.mp4 -c copy -map 0 -segment_time 1 -f segment Split_Museum_1_second_segments/Museum_%03d.MTS
+  523  history | grep ffmpeg
+
+
+export OpenCV_DIR=/usr/local/Cellar/opencv@2/2.4.13.6/share/OpenCV/
+
+scp -r foo user@phoenix28.cs.univ.edu:/home/user/19_colmap
+
+ffmpeg -i /Users/rohuntripathi/Course_3D_Reconstruction/datasets/Split_Panther_3_second_segments/output_video078.MTS -vf "select=not(mod(n\,20))" -vsync vfr -q:v 2 img_%03d.jpg
+
+
+On moving too fast, the thing never found a good initial pair.
+
+	What is fast? - The standard movement, which was provided by the website, worked. The other one, with 30 frames extracted from clips take were spaced out to 3 seconds did not work.
+
+	I tried two mapper attempts, one for 68 minutes and one for 72 minutes. None produced the cameras.txt.
+
+Steps for COLMAP
+1) Create the frames from the videos - execute the "get_first_frame" bash script. Can also change to a python script next time.
+
+2) scp -r Split_Museum_1_second_segment_all_first_frames/Split_Museum_1_second_segments rt443@phoenix28.cs.cornell.edu:/home/user/19_colmap/Split_Museum_1_second_segments/images
+
+3) export PROJECT_PATH=/home/rt443/19_colmap/Split_Museum_1_second_segments_first_frames
+
+4) 
