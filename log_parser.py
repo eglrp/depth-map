@@ -3,7 +3,8 @@ import numpy as np
 import pandas as pd
 import os
 
-source_directory = "/Users/rohuntripathi/Course_3D_Reconstruction/datasets/Split_Museum_1_second_segments_DfUSMC_result/"
+source_directory = "/Users/rohuntripathi/Course_3D_Reconstruction/datasets/" \
+                   "Split_Museum_1_second_segments_DfUSMC_result_longer_convergence/"
 
 files = glob.glob(os.path.join(source_directory, "*.log"))
 files = sorted(files)
